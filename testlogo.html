@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG Image with Gradient Filter</title>
+<style>
+  .svg-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .svg-container svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Define the gradient filter */
+  filter: url(#gradient);
+
+  /* Define the gradient colors */
+  .gradient {
+    stop-color: #ff0000; /* Red */
+    stop-opacity: 0; /* Fully transparent */
+  }
+</style>
+</head>
+<body>
+
+<div class="svg-container">
+  <!-- Embed the external SVG image -->
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Define the gradient filter -->
+    <defs>
+      <filter id="gradient">
+        <feColorMatrix type="matrix" values="1 0 0 0 0
+                                             0 1 0 0 0
+                                             0 0 1 0 0
+                                             0 0 0 1 0" />
+      </filter>
+    </defs>
+
+    <!-- Embed the external SVG image -->
+    <image xlink:href="image.svg" width="200" height="200" filter="url(#gradient)" />
+  </svg>
+</div>
+
+</body>
+</html>

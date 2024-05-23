@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    <title>D8R</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <form id="userForm" action="signupHandler.php" method="post" autocomplete="on">
+        <table>
+            <tr>
+                <th>Username:</th>
+                <td><input type="text" name="username" required></td>
+            </tr>
+
+            <tr>
+                <th>Password:</th>
+                <td><input type="password" name="password" required></td>
+            </tr>
+
+            <tr>
+                <th>Email:</th>
+                <td><input type="email" name="email" required></td>
+            </tr>
+
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Date of Birth:</th>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+
+            <tr>
+                <th>University:</th>
+                <td><input type="text" name="university" required></td>
+            </tr>
+
+            <tr>
+                <th>Major:</th>
+                <td><input type="text" name="major" required></td>
+            </tr>
+
+            <tr>
+                <th>Bio:</th>
+                <td><textarea name="bio" rows="4" cols="50" required></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
